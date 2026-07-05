@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Pedro Ariel Caseres — Servicios profesionales de seguridad. Tu seguridad es mi prioridad. Contactame hoy.">
+  <meta name="author" content="Pedro Ariel Caseres">
+  <title>Pedro Ariel Caseres | Servicios de Seguridad</title>
+
+  <!-- Favicon -->
+  <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+
+  <!-- Google Fonts — Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap" rel="stylesheet">
+
+  <!-- FontAwesome 6 Free (npm) -->
+  <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+
+  <!-- Compiled Tailwind CSS -->
+  <link rel="stylesheet" href="dist/output.css">
+</head>
+
+<body class="font-sans text-gray-700 bg-white">
+
+  <!-- ====================================================================
+       NAVBAR
+       ==================================================================== -->
+  <nav class="fixed w-full top-0 z-50 transition-all duration-300" id="navbar">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-end md:justify-center h-16 md:h-20 relative">
+
+        <!-- Desktop Nav Links (centered) -->
+        <div class="hidden md:flex items-center gap-3">
+          <a href="#inicio"    class="nav-pill active" id="nav-inicio">Inicio</a>
+          <a href="#servicios" class="nav-pill"        id="nav-servicios">Servicios</a>
+          <a href="#sobre-mi"  class="nav-pill"        id="nav-sobre-mi">Sobre mi</a>
+          <a href="#trabajos"  class="nav-pill"        id="nav-trabajos">Trabajos</a>
+          <a href="#contacto"  class="nav-pill"        id="nav-contacto">Contacto</a>
+        </div>
+
+        <!-- Hamburger Button (mobile) -->
+        <button
+          class="md:hidden relative w-10 h-10 flex items-center justify-center rounded-lg text-gray-600 hover:text-primary-800 hover:bg-gray-100 transition-colors"
+          id="hamburger-btn"
+          aria-label="Abrir menú"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <i class="fa-solid fa-bars text-xl" id="hamburger-icon"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="md:hidden hidden bg-white/95 backdrop-blur-md border-t border-gray-100 shadow-lg" id="mobile-menu">
+      <div class="px-4 py-4 space-y-2">
+        <a href="#inicio"    class="mobile-nav-link active">Inicio</a>
+        <a href="#servicios" class="mobile-nav-link">Servicios</a>
+        <a href="#sobre-mi"  class="mobile-nav-link">Sobre mi</a>
+        <a href="#trabajos"  class="mobile-nav-link">Trabajos</a>
+        <a href="#contacto"  class="mobile-nav-link">Contacto</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- ==================================================================
+         SECTION 1 — HERO
+         ================================================================== -->
+    <section id="inicio" class="relative min-h-screen flex items-center justify-center overflow-hidden pb-28">
+      <!-- Background gradient -->
+      <div class="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-indigo-50"></div>
+
+      <!-- Decorative blurred circles -->
+      <div class="absolute top-20 right-10 w-72 h-72 bg-primary-200/20 rounded-full blur-3xl animate-pulse"></div>
+      <div class="absolute bottom-20 left-10 w-96 h-96 bg-indigo-200/20 rounded-full blur-3xl animate-pulse" style="animation-delay: 1s;"></div>
+      <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary-100/10 rounded-full blur-3xl"></div>
+
+      <!-- Content -->
+      <div class="relative z-10 max-w-4xl mx-auto px-4 text-center">
+        <!-- Badge -->
+        <div class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-primary-100/80 text-primary-800 text-sm font-semibold mb-8 backdrop-blur-sm border border-primary-200/40">
+          <i class="fa-solid fa-shield-halved"></i>
+          Servicios de Seguridad Profesional
+        </div>
+
+        <!-- Headline -->
+        <h1 class="font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black text-gray-900 leading-[1.05] tracking-tight italic">
+          Tu seguridad es<br>
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary-700 to-indigo-600">mi prioridad</span>
+        </h1>
+      </div>
+
+      <!-- Scroll indicator -->
+      <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-gray-400 animate-bounce">
+        <span class="text-xs font-medium tracking-wider uppercase">Desplazar</span>
+        <i class="fa-solid fa-chevron-down text-sm"></i>
+      </div>
+    </section>
+
+    <!-- ==================================================================
+         SECTION 2 — SERVICES
+         ================================================================== -->
+    <section id="servicios" class="py-20 md:py-28 bg-gray-50/50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <!-- Section Header -->
+        <div class="text-center max-w-2xl mx-auto mb-16 animate-on-scroll">
+          <span class="inline-block px-4 py-1.5 rounded-full bg-primary-100 text-primary-700 text-sm font-semibold tracking-wide uppercase mb-4">
+            Servicios
+          </span>
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            Servicios que ofrezco
+          </h2>
+          <p class="text-gray-500 text-lg">
+            Ofrezco servicios integrales de seguridad para su bienestar
+          </p>
+        </div>
+
+        <!-- Cards Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+          <!-- Card 1 -->
+          <div class="service-card group animate-on-scroll stagger-1">
+            <div class="w-14 h-14 rounded-2xl bg-primary-100 text-primary-700 flex items-center justify-center mb-6 group-hover:bg-primary-700 group-hover:text-white transition-colors duration-300">
+              <i class="fa-solid fa-shield-halved text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-4">Servicio 1</h3>
+            <ul class="space-y-3 text-gray-500">
+              <li class="flex items-start gap-3">
+                <i class="fa-solid fa-check text-primary-600 mt-1 text-sm"></i>
+                <span>rellenar...</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <i class="fa-solid fa-check text-primary-600 mt-1 text-sm"></i>
+                <span>rellenar...</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <i class="fa-solid fa-check text-primary-600 mt-1 text-sm"></i>
+                <span>rellenar...</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="service-card group animate-on-scroll stagger-2">
+            <div class="w-14 h-14 rounded-2xl bg-emerald-100 text-emerald-700 flex items-center justify-center mb-6 group-hover:bg-emerald-700 group-hover:text-white transition-colors duration-300">
+              <i class="fa-solid fa-user-shield text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-4">Servicio 2</h3>
+            <ul class="space-y-3 text-gray-500">
+              <li class="flex items-start gap-3">
+                <i class="fa-solid fa-check text-emerald-600 mt-1 text-sm"></i>
+                <span>rellenar...</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <i class="fa-solid fa-check text-emerald-600 mt-1 text-sm"></i>
+                <span>rellenar...</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <i class="fa-solid fa-check text-emerald-600 mt-1 text-sm"></i>
+                <span>rellenar...</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="service-card group animate-on-scroll stagger-3">
+            <div class="w-14 h-14 rounded-2xl bg-amber-100 text-amber-700 flex items-center justify-center mb-6 group-hover:bg-amber-700 group-hover:text-white transition-colors duration-300">
+              <i class="fa-solid fa-video text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-4">Servicio 3</h3>
+            <ul class="space-y-3 text-gray-500">
+              <li class="flex items-start gap-3">
+                <i class="fa-solid fa-check text-amber-600 mt-1 text-sm"></i>
+                <span>rellenar...</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <i class="fa-solid fa-check text-amber-600 mt-1 text-sm"></i>
+                <span>rellenar...</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <i class="fa-solid fa-check text-amber-600 mt-1 text-sm"></i>
+                <span>rellenar...</span>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================================================================
+         SECTION 3 — ABOUT ME
+         ================================================================== -->
+    <section id="sobre-mi" class="py-20 md:py-28 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <!-- Section Header -->
+        <div class="text-center max-w-2xl mx-auto mb-16 animate-on-scroll">
+          <span class="inline-block px-4 py-1.5 rounded-full bg-primary-100 text-primary-700 text-sm font-semibold tracking-wide uppercase mb-4">
+            Sobre mí
+          </span>
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900">
+            Soy Pedro Ariel Caseres
+          </h2>
+        </div>
+
+        <!-- Content: Text + Photo -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-16">
+
+          <!-- Text -->
+          <div class="animate-on-scroll">
+            <p class="text-gray-500 text-lg leading-relaxed">
+              rellenar
+            </p>
+          </div>
+
+          <!-- Photo Placeholder -->
+          <div class="flex justify-center animate-on-scroll stagger-2">
+            <div class="w-full max-w-sm aspect-[3/4] rounded-2xl bg-gray-100 border-2 border-dashed border-gray-300 flex items-center justify-center shadow-inner">
+              <div class="text-center">
+                <i class="fa-solid fa-image text-5xl text-gray-300 mb-3"></i>
+                <p class="text-gray-400 font-bold text-lg tracking-wide">MI FOTO</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Stats -->
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-8 animate-on-scroll">
+          <div class="stat-card">
+            <div class="w-12 h-12 rounded-xl bg-primary-100 text-primary-700 flex items-center justify-center mx-auto mb-4">
+              <i class="fa-solid fa-users text-xl"></i>
+            </div>
+            <div class="text-4xl md:text-5xl font-extrabold text-primary-700 mb-2">150+</div>
+            <p class="text-gray-500 font-medium">Clientes felices</p>
+          </div>
+          <div class="stat-card">
+            <div class="w-12 h-12 rounded-xl bg-primary-100 text-primary-700 flex items-center justify-center mx-auto mb-4">
+              <i class="fa-solid fa-clipboard-check text-xl"></i>
+            </div>
+            <div class="text-4xl md:text-5xl font-extrabold text-primary-700 mb-2">300+</div>
+            <p class="text-gray-500 font-medium">Proyectos Completados</p>
+          </div>
+          <div class="stat-card">
+            <div class="w-12 h-12 rounded-xl bg-primary-100 text-primary-700 flex items-center justify-center mx-auto mb-4">
+              <i class="fa-solid fa-calendar-check text-xl"></i>
+            </div>
+            <div class="text-4xl md:text-5xl font-extrabold text-primary-700 mb-2">8+</div>
+            <p class="text-gray-500 font-medium">Años de experiencia</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================================================================
+         SECTION 4 — PORTFOLIO / WORKS
+         ================================================================== -->
+    <section id="trabajos" class="py-20 md:py-28 bg-gray-50/50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <!-- Section Header -->
+        <div class="text-center max-w-2xl mx-auto mb-16 animate-on-scroll">
+          <span class="inline-block px-4 py-1.5 rounded-full bg-primary-100 text-primary-700 text-sm font-semibold tracking-wide uppercase mb-4">
+            Trabajos
+          </span>
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            Proyectos en los que he trabajado
+          </h2>
+          <p class="text-gray-500 text-lg">
+            Echa un vistazo a algunos de mis proyectos y vea cómo he ayudado a las personas con sus problemáticas
+          </p>
+        </div>
+
+        <!-- Projects Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+          <!-- Project 1 -->
+          <div class="project-card group animate-on-scroll stagger-1">
+            <div class="aspect-video bg-gray-100 flex items-center justify-center overflow-hidden">
+              <div class="text-center">
+                <i class="fa-solid fa-image text-3xl text-gray-300 mb-2"></i>
+                <p class="text-gray-400 text-sm font-medium">Imagen del proyecto</p>
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-lg font-bold text-gray-900 mb-2">Proyecto 1</h3>
+              <p class="text-gray-500 text-sm leading-relaxed">proyecto...</p>
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="project-card group animate-on-scroll stagger-2">
+            <div class="aspect-video bg-gray-100 flex items-center justify-center overflow-hidden">
+              <div class="text-center">
+                <i class="fa-solid fa-image text-3xl text-gray-300 mb-2"></i>
+                <p class="text-gray-400 text-sm font-medium">Imagen del proyecto</p>
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-lg font-bold text-gray-900 mb-2">Proyecto 2</h3>
+              <p class="text-gray-500 text-sm leading-relaxed">proyecto...</p>
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div class="project-card group animate-on-scroll stagger-3">
+            <div class="aspect-video bg-gray-100 flex items-center justify-center overflow-hidden">
+              <div class="text-center">
+                <i class="fa-solid fa-image text-3xl text-gray-300 mb-2"></i>
+                <p class="text-gray-400 text-sm font-medium">Imagen del proyecto</p>
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-lg font-bold text-gray-900 mb-2">Proyecto 3</h3>
+              <p class="text-gray-500 text-sm leading-relaxed">proyecto...</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================================================================
+         SECTION 5 — CONTACT
+         ================================================================== -->
+    <section id="contacto" class="py-20 md:py-28 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <!-- Section Header -->
+        <div class="text-center max-w-2xl mx-auto mb-16 animate-on-scroll">
+          <span class="inline-block px-4 py-1.5 rounded-full bg-primary-100 text-primary-700 text-sm font-semibold tracking-wide uppercase mb-4">
+            Contacto
+          </span>
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            Ponte En Contacto
+          </h2>
+          <p class="text-gray-500 text-lg">
+            ¿Tienes dudas o algún problema que necesita solución rápida? No pierdas tiempo y ponte en contacto conmigo hoy
+          </p>
+        </div>
+
+        <!-- Contact Info Cards -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-2xl mx-auto mb-16 animate-on-scroll">
+
+          <!-- Email Card -->
+          <div class="contact-info-card" id="contact-email-card">
+            <div class="w-12 h-12 rounded-xl bg-primary-100 text-primary-700 flex items-center justify-center mb-4 mx-auto">
+              <i class="fa-solid fa-envelope text-xl"></i>
+            </div>
+            <h3 class="font-bold text-gray-900 mb-1">Envíame un correo electrónico</h3>
+            <p class="text-gray-500 text-sm">correo@ejemplo.com</p>
+          </div>
+
+          <!-- WhatsApp Card -->
+          <div class="contact-info-card" id="contact-whatsapp-card">
+            <div class="w-12 h-12 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center mb-4 mx-auto">
+              <i class="fa-brands fa-whatsapp text-xl"></i>
+            </div>
+            <h3 class="font-bold text-gray-900 mb-1">WhatsApp</h3>
+            <p class="text-gray-500 text-sm">+54 XXX XXX XXXX</p>
+          </div>
+
+        </div>
+
+        <!-- Contact Form -->
+        <div class="max-w-3xl mx-auto animate-on-scroll">
+          <div class="bg-gray-50 rounded-2xl p-8 md:p-10 border border-gray-100">
+
+            <h3 class="text-xl font-bold text-gray-900 mb-2">Enviame un mensaje</h3>
+            <p class="text-gray-500 mb-8">
+              Completá el formulario y me pondré en contacto con vos a la brevedad.
+            </p>
+
+            <form id="contact-form" novalidate>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+
+                <!-- Nombre -->
+                <div>
+                  <label for="name" class="block text-sm font-semibold text-gray-700 mb-2">
+                    Nombre <span class="text-red-500">*</span>
+                  </label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    required
+                    placeholder="Tu nombre"
+                    class="form-input"
+                  >
+                </div>
+
+                <!-- Email -->
+                <div>
+                  <label for="email" class="block text-sm font-semibold text-gray-700 mb-2">
+                    Correo electrónico <span class="text-red-500">*</span>
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    required
+                    placeholder="tu@email.com"
+                    class="form-input"
+                  >
+                </div>
+
+                <!-- Teléfono (optional) -->
+                <div>
+                  <label for="phone" class="block text-sm font-semibold text-gray-700 mb-2">
+                    Teléfono
+                  </label>
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    placeholder="Tu teléfono (opcional)"
+                    class="form-input"
+                  >
+                </div>
+
+                <!-- Servicio necesario -->
+                <div>
+                  <label for="service" class="block text-sm font-semibold text-gray-700 mb-2">
+                    Servicio necesario
+                  </label>
+                  <select id="service" name="service" class="form-input">
+                    <option value="" disabled selected>Seleccioná un servicio</option>
+                    <option value="servicio-1">servicio 1...</option>
+                    <option value="servicio-2">servicio 2...</option>
+                    <option value="servicio-3">servicio 3...</option>
+                  </select>
+                </div>
+
+              </div>
+
+              <!-- Detalles del proyecto -->
+              <div class="mb-6">
+                <label for="details" class="block text-sm font-semibold text-gray-700 mb-2">
+                  Detalles del proyecto <span class="text-red-500">*</span>
+                </label>
+                <textarea
+                  id="details"
+                  name="details"
+                  rows="5"
+                  required
+                  placeholder="Describí tu situación o lo que necesitás..."
+                  class="form-input resize-none"
+                ></textarea>
+              </div>
+
+              <!-- Submit Button -->
+              <button
+                type="submit"
+                id="contact-submit-btn"
+                class="w-full md:w-auto px-8 py-3.5 bg-primary-700 hover:bg-primary-800 text-white font-semibold rounded-xl transition-all duration-300 hover:shadow-lg hover:shadow-primary-700/25 active:scale-[0.98]"
+              >
+                <i class="fa-solid fa-paper-plane mr-2"></i>
+                Enviar mensaje
+              </button>
+            </form>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ====================================================================
+       FOOTER
+       ==================================================================== -->
+  <footer class="bg-gray-900 text-gray-300 pt-16 pb-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <!-- Footer Columns -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+
+        <!-- Column 1 — Brand + Social Icons -->
+        <div>
+          <h3 class="text-white font-bold text-lg mb-6">Pedro Ariel Caseres</h3>
+          <div class="flex gap-3">
+            <a href="#" class="footer-social-link" aria-label="LinkedIn" id="footer-linkedin">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+            <a href="#" class="footer-social-link" aria-label="Gmail" id="footer-gmail">
+              <i class="fa-solid fa-envelope"></i>
+            </a>
+            <a href="#" class="footer-social-link" aria-label="WhatsApp" id="footer-whatsapp">
+              <i class="fa-brands fa-whatsapp"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Column 2 — Quick Links -->
+        <div>
+          <h3 class="text-white font-bold text-lg mb-6">Enlaces rápidos</h3>
+          <ul class="space-y-3">
+            <li><a href="#inicio"    class="footer-link">Inicio</a></li>
+            <li><a href="#servicios" class="footer-link">Servicios</a></li>
+            <li><a href="#sobre-mi"  class="footer-link">Sobre mi</a></li>
+            <li><a href="#trabajos"  class="footer-link">Trabajos</a></li>
+            <li><a href="#contacto"  class="footer-link">Contacto</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3 — Services -->
+        <div>
+          <h3 class="text-white font-bold text-lg mb-6">Servicios</h3>
+          <ul class="space-y-3">
+            <li><a href="#" class="footer-link">proyecto 1...</a></li>
+            <li><a href="#" class="footer-link">proyecto 2...</a></li>
+            <li><a href="#" class="footer-link">proyecto 3...</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Divider + Legal -->
+      <div class="border-t border-gray-800 pt-8">
+        <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+          <p class="text-gray-500 text-sm">
+            &copy; 2026 Thiago Ariel Caseres. Todos los derechos reservados.
+          </p>
+          <div class="flex flex-wrap justify-center gap-6 text-sm">
+            <a href="#" class="text-gray-500 hover:text-gray-300 transition-colors" id="footer-privacy">Política de privacidad</a>
+            <a href="#" class="text-gray-500 hover:text-gray-300 transition-colors" id="footer-terms">Términos de Servicio</a>
+            <a href="#" class="text-gray-500 hover:text-gray-300 transition-colors" id="footer-cookies">Política de cookies</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+</body>
+</html>
