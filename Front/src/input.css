@@ -104,11 +104,11 @@
    Utility Layer
    =========================== */
 @layer utilities {
-  /* Scroll-triggered animation base state */
+  /* Scroll-triggered animation — dramatic rise up */
   .animate-on-scroll {
     opacity: 0;
-    transform: translateY(24px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    transform: translateY(80px);
+    transition: opacity 0.9s ease-out, transform 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   }
 
   .animate-on-scroll.animated {
@@ -116,8 +116,60 @@
     transform: translateY(0);
   }
 
-  /* Stagger delays for children */
-  .stagger-1 { transition-delay: 0.1s; }
-  .stagger-2 { transition-delay: 0.2s; }
-  .stagger-3 { transition-delay: 0.3s; }
+  /* Cards — scale up from invisible + blur clear */
+  .animate-on-scroll.fade-scale {
+    opacity: 0;
+    transform: translateY(50px) scale(0.85);
+    filter: blur(4px);
+    transition: opacity 0.7s ease-out,
+                transform 0.7s cubic-bezier(0.34, 1.56, 0.64, 1),
+                filter 0.7s ease-out;
+  }
+
+  .animate-on-scroll.fade-scale.animated {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+  }
+
+  /* Slide-in from the right (profile photo) */
+  .animate-on-scroll.slide-right {
+    opacity: 0;
+    transform: translateX(80px) rotate(4deg);
+    transition: opacity 0.9s ease-out, transform 0.9s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+
+  .animate-on-scroll.slide-right.animated {
+    opacity: 1;
+    transform: translateX(0) rotate(0deg);
+  }
+
+  /* Slide-in from the left (about text) */
+  .animate-on-scroll.slide-left {
+    opacity: 0;
+    transform: translateX(-80px);
+    transition: opacity 0.9s ease-out, transform 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+  .animate-on-scroll.slide-left.animated {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  /* Scale pop (for stat counters) */
+  .animate-on-scroll.pop {
+    opacity: 0;
+    transform: scale(0.7);
+    transition: opacity 0.6s ease-out, transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+
+  .animate-on-scroll.pop.animated {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  /* Stagger delays — more spread out for cinematic cascade */
+  .stagger-1 { transition-delay: 0.15s; }
+  .stagger-2 { transition-delay: 0.35s; }
+  .stagger-3 { transition-delay: 0.55s; }
 }
