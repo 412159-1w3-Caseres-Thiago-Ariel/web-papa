@@ -16,6 +16,61 @@ document.addEventListener('DOMContentLoaded', () => {
   const mobileLinks   = document.querySelectorAll('.mobile-nav-link');
   const sections      = document.querySelectorAll('section[id]');
   const contactForm   = document.getElementById('contact-form');
+  const heroHeading   = document.getElementById('hero-heading');
+
+  /* ============================
+     Typewriter Effect (Hero)
+     ============================ */
+  function initTypewriter() {
+    if (!heroHeading) return;
+
+    const line1 = 'Tu seguridad es';
+    const line2 = 'mi prioridad';
+    const charDelay  = 75;   // ms per character
+    const lineDelay  = 400;  // pause between lines
+    const startDelay = 800;  // delay before starting
+
+    let typed = '';
+
+    function updateHeading() {
+      const breakpoint = line1.length;
+      let html = '';
+
+      if (typed.length <= breakpoint) {
+        // Still typing line 1
+        html = typed;
+      } else {
+        // Line 1 done, typing line 2
+        const line2Typed = typed.substring(breakpoint);
+        html = line1 + '<br><span class="text-transparent bg-clip-text bg-gradient-to-r from-primary-700 to-indigo-600">' + line2Typed + '</span>';
+      }
+
+      html += '<span class="typewriter-cursor">|</span>';
+      heroHeading.innerHTML = html;
+    }
+
+    function typeNextChar() {
+      const fullText = line1 + line2;
+
+      if (typed.length < fullText.length) {
+        typed += fullText[typed.length];
+        updateHeading();
+
+        // Pause after line 1 is complete
+        if (typed.length === line1.length) {
+          setTimeout(typeNextChar, lineDelay);
+        } else {
+          setTimeout(typeNextChar, charDelay);
+        }
+      }
+      // After done, cursor keeps blinking
+    }
+
+    // Start after initial delay
+    setTimeout(typeNextChar, startDelay);
+  }
+
+  initTypewriter();
 
   /* ============================
      Hamburger Menu
